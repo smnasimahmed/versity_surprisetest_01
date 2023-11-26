@@ -19,11 +19,18 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             height: 250,
           ),
-          Text(
-            "Welcome!",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-                fontSize: 35, fontWeight: FontWeight.bold, color: Colors.black),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 32),
+              child: Text(
+                "Welcome!",
+                style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            ),
           ),
           SizedBox(
             height: 5,
@@ -34,7 +41,12 @@ class LoginPage extends StatelessWidget {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                      hintText: "Enter Username", labelText: "Username"),
+                    hintText: "Enter Username",
+                    labelText: "Username",
+                    labelStyle: TextStyle(color: Colors.white),
+                    floatingLabelStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
@@ -44,6 +56,9 @@ class LoginPage extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "Enter Password",
                     labelText: "Password",
+                    labelStyle: TextStyle(color: Colors.white),
+                    floatingLabelStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white),
                   ),
                 ),
                 SizedBox(
@@ -54,14 +69,35 @@ class LoginPage extends StatelessWidget {
                       Navigator.pushNamed(context, "/homepage");
                     },
                     style: TextButton.styleFrom(
+                        shadowColor: Colors.black,
+                        elevation: 7,
                         foregroundColor: Colors.white,
                         fixedSize: Size(300, 30),
                         textStyle: TextStyle(fontSize: 17)),
-                    child: Text("Login")),
+                    child: Text("Login",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 104, 49, 155)))),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Forgot Password?")
+                Text("Forgot Password?", style: TextStyle(color: Colors.white)),
+                SizedBox(
+                  height: 110,
+                ),
+                Text("Don't have an account?",
+                    style: TextStyle(color: Colors.white)),
+                SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        fixedSize: Size(150, 30),
+                        textStyle: TextStyle(fontSize: 17)),
+                    child: Text("Create",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 104, 49, 155)))),
               ],
             ),
           )

@@ -17,7 +17,17 @@ class LoginPage extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 250,
+            height: 150,
+          ),
+          Container(
+              child: ClipOval(
+            child: SizedBox.fromSize(
+              size: Size.fromRadius(48), // Image radius
+              child: Image.asset("lib/image/4.jpg", fit: BoxFit.cover),
+            ),
+          )),
+          SizedBox(
+            height: 50,
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -41,12 +51,13 @@ class LoginPage extends StatelessWidget {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: "Enter Username",
-                    labelText: "Username",
-                    labelStyle: TextStyle(color: Colors.white),
-                    floatingLabelStyle: TextStyle(color: Colors.white),
-                    hintStyle: TextStyle(color: Colors.white),
-                  ),
+                      hintText: "Enter Username",
+                      labelText: "Username",
+                      labelStyle: TextStyle(color: Colors.white),
+                      floatingLabelStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white))),
                 ),
                 SizedBox(
                   height: 20,
@@ -54,12 +65,13 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    hintText: "Enter Password",
-                    labelText: "Password",
-                    labelStyle: TextStyle(color: Colors.white),
-                    floatingLabelStyle: TextStyle(color: Colors.white),
-                    hintStyle: TextStyle(color: Colors.white),
-                  ),
+                      hintText: "Enter Password",
+                      labelText: "Password",
+                      labelStyle: TextStyle(color: Colors.white),
+                      floatingLabelStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white))),
                 ),
                 SizedBox(
                   height: 30,

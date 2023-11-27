@@ -1,6 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -73,11 +71,21 @@ class _HomePageState extends State<HomePage> {
               image: AssetImage("lib/image/locat_appbar.jpg"),
               fit: BoxFit.cover,
             ),
-            leading: Icon(
-              Icons.more_horiz_rounded,
-              color: Colors.white,
+            leading: Padding(
+              padding: EdgeInsets.only(left: 30),
+              child: Icon(
+                Icons.more_horiz_rounded,
+                color: Colors.white,
+              ),
             ),
-            actions: [Icon(Icons.person_2_sharp, color: Colors.white)],
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 30),
+                child: CircleAvatar(
+                    child: Icon(Icons.person_outline_outlined,
+                        color: Color.fromARGB(255, 104, 49, 155))),
+              )
+            ],
           ),
           body: Container(
             decoration: BoxDecoration(

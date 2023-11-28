@@ -74,9 +74,14 @@ class _LocationPageState extends State<LocationPage> {
             ),
             leading: Padding(
               padding: EdgeInsets.only(left: 40),
-              child: Icon(
-                Icons.arrow_back_ios,
-                color: Colors.white,
+              child: IconButton(
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/homepage");
+                },
               ),
             ),
             actions: [

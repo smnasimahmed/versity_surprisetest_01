@@ -72,8 +72,22 @@ class _LocationPageState extends State<LocationPage> {
               image: AssetImage("lib/image/locat_appbar.jpg"),
               fit: BoxFit.cover,
             ),
-            leading: Icon(Icons.arrow_back_ios),
-            actions: [Icon(Icons.more_horiz_rounded)],
+            leading: Padding(
+              padding: EdgeInsets.only(left: 40),
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+              ),
+            ),
+            actions: [
+              Padding(
+                padding: EdgeInsets.only(right: 40),
+                child: Icon(
+                  Icons.more_horiz_rounded,
+                  color: Colors.white,
+                ),
+              )
+            ],
           ),
           body: Container(
             decoration: BoxDecoration(
@@ -95,7 +109,10 @@ class _LocationPageState extends State<LocationPage> {
                       SizedBox(
                         width: 25,
                       ),
-                      Icon(Icons.swap_calls_outlined),
+                      Icon(
+                        Icons.swap_calls_outlined,
+                        color: Colors.white,
+                      ),
                       SizedBox(
                         width: 25,
                       ),
